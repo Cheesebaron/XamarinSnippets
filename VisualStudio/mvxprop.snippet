@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>MvvmCross Property</Title>
+      <Author>Tomasz Cielecki</Author>
+      <Description>
+      </Description>
+      <HelpUrl>https://github.com/Cheesebaron/XamarinSnippets</HelpUrl>
+      <Shortcut>mvxprop</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>type</ID>
+          <ToolTip>Type</ToolTip>
+          <Default>int</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>name</ID>
+          <ToolTip>Field Name</ToolTip>
+          <Default>propertyName</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>pname</ID>
+          <ToolTip>Property Name</ToolTip>
+          <Default>PropertyName</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp"><![CDATA[private $type$ $name$;
+public $type$ $pname$
+{
+    get { return $name$; }
+    set
+    {
+        $name$ = value; 
+        RaisePropertyChanged(() => $pname$);
+    }
+}
+$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
