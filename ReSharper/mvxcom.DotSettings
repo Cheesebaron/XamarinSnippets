@@ -21,4 +21,5 @@ private void Do$PNAME$()&#xD;
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C55E15B66F28A2469C999F171291E5F3/Field/=NAME/@KeyIndexDefined">True</s:Boolean>
 	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C55E15B66F28A2469C999F171291E5F3/Field/=NAME/Order/@EntryValue">0</s:Int64>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C55E15B66F28A2469C999F171291E5F3/Field/=PNAME/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C55E15B66F28A2469C999F171291E5F3/Field/=PNAME/Expression/@EntryValue">capitalize(NAME)</s:String>
 	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C55E15B66F28A2469C999F171291E5F3/Field/=PNAME/Order/@EntryValue">1</s:Int64></wpf:ResourceDictionary>
