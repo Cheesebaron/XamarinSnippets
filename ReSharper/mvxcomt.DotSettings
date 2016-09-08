@@ -7,7 +7,7 @@
 public ICommand $PNAME$ =&gt;&#xD;
     _$NAME$ = _$NAME$ ?? new MvxCommand&lt;$TYPE$&gt;(Do$PNAME$);&#xD;
 &#xD;
-private void Do$PNAME$($TYPE$ arg)&#xD;
+private void Do$PNAME$($TYPE$ $ARGNAME$)&#xD;
 {&#xD;
     $END$        &#xD;
 }</s:String>
@@ -24,4 +24,8 @@ private void Do$PNAME$($TYPE$ arg)&#xD;
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=810F351D07BF574D8D735CFED42F78F1/Field/=NAME/@KeyIndexDefined">True</s:Boolean>
 	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=810F351D07BF574D8D735CFED42F78F1/Field/=NAME/Order/@EntryValue">1</s:Int64>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=810F351D07BF574D8D735CFED42F78F1/Field/=PNAME/@KeyIndexDefined">True</s:Boolean>
-	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=810F351D07BF574D8D735CFED42F78F1/Field/=PNAME/Order/@EntryValue">2</s:Int64></wpf:ResourceDictionary>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=810F351D07BF574D8D735CFED42F78F1/Field/=PNAME/Expression/@EntryValue">capitalize(NAME)</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=810F351D07BF574D8D735CFED42F78F1/Field/=PNAME/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=810F351D07BF574D8D735CFED42F78F1/Field/=ARGNAME/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=810F351D07BF574D8D735CFED42F78F1/Field/=ARGNAME/Expression/@EntryValue">suggestVariableName()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=810F351D07BF574D8D735CFED42F78F1/Field/=ARGNAME/Order/@EntryValue">3</s:Int64></wpf:ResourceDictionary>
