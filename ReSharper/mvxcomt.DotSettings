@@ -13,7 +13,6 @@ private void Do$PNAME$($TYPE$ $ARGNAME$)&#xD;
 }</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=810F351D07BF574D8D735CFED42F78F1/Reformat/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=810F351D07BF574D8D735CFED42F78F1/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
-	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=810F351D07BF574D8D735CFED42F78F1/Categories/=Imported_00205_002F3_002F2016/@EntryIndexedValue">Imported 5/3/2016</s:String>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=810F351D07BF574D8D735CFED42F78F1/Categories/=MvvmCross/@EntryIndexedValue">MvvmCross</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=810F351D07BF574D8D735CFED42F78F1/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=810F351D07BF574D8D735CFED42F78F1/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
