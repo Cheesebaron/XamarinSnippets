@@ -1,14 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>MvvmCross Property</Title>
+      <Title>MvvmCross Command Async Generic</Title>
       <Author>Tomasz Cielecki</Author>
       <Description>
-      Adds a MvvmCross property which fires NotifyPropertyChanged
+      Adds a MvvmCross Generic Async Command
       </Description>
       <HelpUrl>https://github.com/Cheesebaron/XamarinSnippets</HelpUrl>
-      <Shortcut>mvxprop</Shortcut>
+      <Shortcut>mvxcomtasync</Shortcut>
     </Header>
     <Snippet>
       <Declarations>
@@ -34,13 +34,22 @@
           </Function>
         </Literal>
       </Declarations>
-      <Code Language="csharp"><![CDATA[private $type$ $name$;
-public $type$ $pname$
+      <Code Language="csharp"><![CDATA[private MvxAsyncCommand<$type$> $name$;
+public MvxAsyncCommand<$type$> $pname$ =>
+    $name$ ??= new MvxAsyncCommand<$type$>(Do$pname$Async);
+
+private Task Do$pname$Async($type$ arg, CancellationToken cancellationToken)
 {
-    get => $name$;
-    set => SetProperty(ref $name$, value);
-}
-$end$]]></Code>
+    $end$
+}]]></Code>
+        <Imports>
+          <Import>
+            <Namespace>MvvmCross.ViewModels</Namespace>
+            <Namespace>MvvmCross.Commands</Namespace>
+            <Namespace>System.Threading</Namespace>
+            <Namespace>System.Threading.Task</Namespace>
+          </Import>
+        </Imports>
     </Snippet>
   </CodeSnippet>
 </CodeSnippets>

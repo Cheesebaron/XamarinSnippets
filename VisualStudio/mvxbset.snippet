@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>MvvmCross Command</Title>
+      <Author>Tomasz Cielecki</Author>
+      <Description>
+      Adds a MvvmCross Binding Set
+      </Description>
+      <HelpUrl>https://github.com/Cheesebaron/XamarinSnippets</HelpUrl>
+      <Shortcut>mvxbset</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>viewType</ID>
+          <ToolTip>View Type</ToolTip>
+          <Default>MyView</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>viewModelType</ID>
+          <ToolTip>ViewModel Type</ToolTip>
+          <Default>MyViewModel</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp"><![CDATA[using var set = this.CreateBindingSet<$viewType$, $viewModelType$>();$end$]]></Code>
+        <Imports>
+          <Import>
+            <Namespace>MvvmCross.Binding.BindingContext</Namespace>
+          </Import>
+        </Imports>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
