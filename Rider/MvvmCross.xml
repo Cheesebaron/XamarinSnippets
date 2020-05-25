@@ -1,0 +1,143 @@
+<templateSet group="MvvmCross">
+  <template name="mvxprop" value="private $type$ $name$;&#10;public $type$ $pname$&#10;{&#10;    get =&gt; $name$;&#10;    set =&gt; SetProperty(ref $name$, value);&#10;}" description="MvvmCross Property" toReformat="false" toShortenFQNames="true">
+    <variable name="type" expression="expectedType()" defaultValue="string" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="myProperty" alwaysStopAt="true" />
+    <variable name="pname" expression="capitalize(name)" defaultValue="MyProperty" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="ECMAScript6" value="false" />
+      <option name="HTML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="Vue" value="false" />
+      <option name="XML" value="false" />
+      <option name="XML_ATTRIBUTE" value="false" />
+    </context>
+  </template>
+  <template name="mvxcom" value="private MvxCommand $name$;&#10;public MvxCommand $pname$ =&gt;&#10;    $name$ ??= new MvxCommand(Do$pname$);&#10;&#10;private void Do$pname$()&#10;{&#10;&#10;}" description="MvvmCross Command" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="myCommand" alwaysStopAt="true" />
+    <variable name="pname" expression="capitalize(name)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="ECMAScript6" value="false" />
+      <option name="HTML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="Vue" value="false" />
+      <option name="XML" value="false" />
+      <option name="XML_ATTRIBUTE" value="false" />
+    </context>
+  </template>
+  <template name="mvxcomt" value="private MvxCommand&lt;$type$&gt; $name$;&#10;public MvxCommand&lt;$type$&gt; $pname$ =&gt;&#10;    $name$ ??= new MvxCommand&lt;$type$&gt;(Do$pname$);&#10;&#10;private void Do$pname$($type$ arg)&#10;{&#10;&#10;}" description="MvvmCross Generic Command" toReformat="false" toShortenFQNames="true">
+    <variable name="type" expression="" defaultValue="string" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="myCommand" alwaysStopAt="true" />
+    <variable name="pname" expression="capitalize(name)" defaultValue="MyCommand" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="ECMAScript6" value="false" />
+      <option name="HTML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="Vue" value="false" />
+      <option name="XML" value="false" />
+      <option name="XML_ATTRIBUTE" value="false" />
+    </context>
+  </template>
+  <template name="mvxcomasync" value="private MvxAsyncCommand $name$;&#10;public MvxAsyncCommand $pname$ =&gt;&#10;    $name$ ??= new MvxAsyncCommand(Do$pname$Async);&#10;&#10;private Task Do$pname$Async(CancellationToken cancellationToken)&#10;{&#10;&#10;}" description="MvvmCross Async Command" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="myCommand" alwaysStopAt="true" />
+    <variable name="pname" expression="capitalize(name)" defaultValue="MyCommand" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="ECMAScript6" value="false" />
+      <option name="HTML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="Vue" value="false" />
+      <option name="XML" value="false" />
+      <option name="XML_ATTRIBUTE" value="false" />
+    </context>
+  </template>
+  <template name="mvxcomtasync" value="private MvxAsyncCommand&lt;$type$&gt; $name$;&#10;public MvxAsyncCommand&lt;$type$&gt; $pname$ =&gt;&#10;    $name$ ??= new MvxAsyncCommand&lt;$type$&gt;(Do$pname$Async);&#10;&#10;private Task Do$pname$Async($type$ arg, CancellationToken cancellationToken)&#10;{&#10;&#10;}" description="MvvmCross Generic Async Command" toReformat="false" toShortenFQNames="true">
+    <variable name="type" expression="" defaultValue="string" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="myCommand" alwaysStopAt="true" />
+    <variable name="pname" expression="capitalize(name)" defaultValue="MyCommand" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="ECMAScript6" value="false" />
+      <option name="HTML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="Vue" value="false" />
+      <option name="XML" value="false" />
+      <option name="XML_ATTRIBUTE" value="false" />
+    </context>
+  </template>
+  <template name="mvxbset" value="using var set = this.CreateBindingSet&lt;$viewType$, $viewModelType$&gt;();" description="MvvmCross Binding Set" toReformat="false" toShortenFQNames="true">
+    <variable name="viewType" expression="" defaultValue="MyView" alwaysStopAt="true" />
+    <variable name="viewModelType" expression="" defaultValue="MyViewModel" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="ECMAScript6" value="false" />
+      <option name="HTML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="SQL" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="Vue" value="false" />
+      <option name="XML" value="false" />
+      <option name="XML_ATTRIBUTE" value="false" />
+    </context>
+  </template>
+</templateSet>
