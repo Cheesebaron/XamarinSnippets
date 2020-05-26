@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeTemplates version="3.0">
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>mvvmcross</_Group>
+      <Version />
+      <MimeType>text/x-csharp</MimeType>
+      <Shortcut>mvxcomt</Shortcut>
+      <_Description>Create a MvvmCross Generic Command</_Description>
+      <TemplateType>Expansion</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="name">
+        <Default>myCommand</Default>
+        <_ToolTip>Backing field for command</_ToolTip>
+      </Variable>
+      <Variable name="type">
+        <Default>int</Default>
+        <_ToolTip>Type of the parameter passed into the command</_ToolTip>
+      </Variable>
+      <Variable name="pname">
+        <Default>MyCommand</Default>
+        <_ToolTip>Property for the Command</_ToolTip>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[private MvxCommand<$type$> $name$;
+public MvxCommand<$type$> $pname$ =>
+    $name$ ??= new MvxCommand<$type$>(Do$pname$);
+
+private void Do$pname$($type$ arg)
+{
+    $end$
+}]]></Code>
+  </CodeTemplate>
+</CodeTemplates>

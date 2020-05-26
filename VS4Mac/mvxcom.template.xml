@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeTemplates version="3.0">
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>mvvmcross</_Group>
+      <Version />
+      <MimeType>text/x-csharp</MimeType>
+      <Shortcut>mvxcom</Shortcut>
+      <_Description>Create MvvmCross View Model Command</_Description>
+      <TemplateType>Expansion</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="name">
+        <Default>myCommand</Default>
+        <_ToolTip>Name of the backing field for command</_ToolTip>
+      </Variable>
+      <Variable name="pname">
+        <Default>MyCommand</Default>
+        <_ToolTip>Name of the Command Property</_ToolTip>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[private MvxCommand $name$;
+public MvxCommand $pname$ =>
+    $name$ ??= new MvxCommand(Do$pname$);
+
+private void Do$pname$()
+{
+    $end$
+}]]></Code>
+  </CodeTemplate>
+</CodeTemplates>

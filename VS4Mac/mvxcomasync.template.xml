@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeTemplates version="3.0">
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>mvvmcross</_Group>
+      <Version />
+      <MimeType>text/x-csharp</MimeType>
+      <Shortcut>mvxcomasync</Shortcut>
+      <_Description>Create a MvvmCross View Model Async Command</_Description>
+      <TemplateType>Expansion</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="name">
+        <Default>myCommand</Default>
+        <_ToolTip>The backing field for the command</_ToolTip>
+      </Variable>
+      <Variable name="pname">
+        <Default>MyCommand</Default>
+        <_ToolTip>The command property</_ToolTip>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[private MvxAsyncCommand $name$;
+public MvxAsyncCommand $pname$ =>
+    $name$ ??= new MvxAsyncCommand(Do$pname$Async);
+
+private Task Do$pname$Async()
+{
+    $end$
+}]]></Code>
+  </CodeTemplate>
+</CodeTemplates>

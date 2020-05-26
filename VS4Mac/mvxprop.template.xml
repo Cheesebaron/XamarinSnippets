@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeTemplates version="3.0">
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>mvvmcross</_Group>
+      <Version />
+      <MimeType>text/x-csharp</MimeType>
+      <Shortcut>mvxprop</Shortcut>
+      <_Description>Create a MvvmCross View Model Property</_Description>
+      <TemplateType>Expansion</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="type" isIdentifier="true">
+        <Default>int</Default>
+        <_ToolTip>Return type of the backing field</_ToolTip>
+      </Variable>
+      <Variable name="name" isIdentifier="true">
+        <Default>propertyName</Default>
+        <_ToolTip>Backing field name</_ToolTip>
+      </Variable>
+      <Variable name="pname" isIdentifier="true">
+        <Default>PropertyName</Default>
+        <_ToolTip>Property Name</_ToolTip>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[private $type$ $name$;
+public $type$ $pname$
+{
+    get => $name$;
+    set => SetProperty(ref $name$, value);
+}]]></Code>
+  </CodeTemplate>
+</CodeTemplates>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeTemplates version="3.0">
+  <CodeTemplate version="2.0">
+    <Header>
+      <_Group>mvvmcross</_Group>
+      <Version />
+      <MimeType>text/x-csharp</MimeType>
+      <Shortcut>mvxcomtasync</Shortcut>
+      <_Description>Create a MvvmCross View Model Generic Async Command</_Description>
+      <TemplateType>Expansion</TemplateType>
+    </Header>
+    <Variables>
+      <Variable name="type">
+        <Default>int</Default>
+        <_ToolTip>Type of the parameter passed into the command</_ToolTip>
+      </Variable>
+      <Variable name="name">
+        <Default>myCommand</Default>
+        <_ToolTip>Backing field name of the Command</_ToolTip>
+      </Variable>
+      <Variable name="pname">
+        <Default>MyCommand</Default>
+        <_ToolTip>Property name of the command</_ToolTip>
+      </Variable>
+    </Variables>
+    <Code><![CDATA[private MvxAsyncCommand<$type$> $name$;
+public MvxAsyncCommand<$type$> $pname$ =>
+    $name$ ??= new MvxAsyncCommand<$type$>(Do$pname$Async);
+
+private Task Do$pname$Async($type$ arg, CancellationToken cancellationToken)
+{
+    $end$
+}]]></Code>
+  </CodeTemplate>
+</CodeTemplates>
